@@ -1,7 +1,9 @@
+import BlogComponent from "../components/BlogComponent";
+
 const Blog = () => {
   return (
     <>
-      <h2>Blog</h2>
+      <BlogComponent />
     </>
   );
 };
