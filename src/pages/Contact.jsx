@@ -3,7 +3,7 @@ import ContactComponent from "../components/ContactComponent";
 const Contact = () => {
   return (
     <>
-      <ContactComponent />
+      <ContactComponent defaultName="Yogesh Patil" age="25" />
     </>
   );
 };

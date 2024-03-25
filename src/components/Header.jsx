@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <>
@@ -24,30 +24,50 @@ const Header = () => {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav mr-auto">
-                <li className="nav-item active">
-                  <Link className="nav-link" to="/">
+                <li className="nav-item">
+                  <NavLink
+                    className={`nav-link ${(navData) =>
+                      navData.isActive ? "active" : ""}`}
+                    to="/"
+                  >
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="about">
+                  <NavLink
+                    className={`nav-link ${(navData) =>
+                      navData.isActive ? "active" : ""}`}
+                    to="about"
+                  >
                     About
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="whatwedo">
+                  <NavLink
+                    className={`nav-link ${(navData) =>
+                      navData.isActive ? "active" : ""}`}
+                    to="whatwedo"
+                  >
                     What we do
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="blog">
+                  <NavLink
+                    className={`nav-link ${(navData) =>
+                      navData.isActive ? "active" : ""}`}
+                    to="blog"
+                  >
                     Blog
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="contact">
+                  <NavLink
+                    className={`nav-link ${(navData) =>
+                      navData.isActive ? "active" : ""}`}
+                    to="contact"
+                  >
                     Contact Us
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
               <form className="form-inline my-2 my-lg-0">

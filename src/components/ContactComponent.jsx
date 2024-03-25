@@ -1,11 +1,19 @@
-const ContactComponent = () => {
+import { useState } from "react";
+
+const ContactComponent = ({ defaultName, age }) => {
+  const [name, setName] = useState(defaultName);
+  console.log(name);
+  console.log(defaultName);
   return (
     <>
       <div className="contact_section layout_padding">
         <div className="container">
           <div className="row">
             <div className="col-sm-12">
-              <h1 className="contact_taital">Free Consulation</h1>
+              {/* <h2>My name is {name}</h2> */}
+              <h1 className="contact_taital">
+                My Name is {name} and my age is {age}
+              </h1>
             </div>
           </div>
           <div className="contact_section_2">
@@ -14,6 +22,7 @@ const ContactComponent = () => {
                 <div className="mail_section map_form_container">
                   <form action="">
                     <input
+                      onChange={(e) => setName(e.target.value)}
                       type="text"
                       className="mail_text"
                       placeholder="Name"
